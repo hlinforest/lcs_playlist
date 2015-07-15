@@ -1,0 +1,6 @@
+<% @videos.each do |video| %>
+  <div class="video">
+    <h3><%= video.title %><small>(by: <%= video.author %>)</small></h3>
+    <iframe width="560" height="315" src="<%= get_embed_url(video.url) %>" frameborder="0" allowfullscreen></iframe>
+  </div>
+<% end %>
